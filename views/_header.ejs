@@ -1,0 +1,21 @@
+<div class="navbar">
+
+    <% if(locals.user){ %>
+        <ul class="nav1" style="width: 100%;">
+        <li><h2 style="width: 50%; margin-left: 40px;"><a href="http://localhost:8000/" style="font-size: 1.5rem;">MovieApp</a></h2></li>
+        <div style="display: flex; width: 50%; justify-content: space-around; align-items: center;">
+            <li><a href="/users/profile"><%= user.name%></a></a></li> 
+            <li><a href="/users/signout">Sign Out</a></li>
+        </div>
+        </ul>
+    <% }else{ %>
+        <ul class="nav1" style="width: 100%;">
+        <li><h2 style="width: 50%; margin-left: 40px;"><a href="http://localhost:8000/" style="font-size: 1.5rem;">MovieApp</a></h2></li>
+        <div style="display: flex; width: 50%; justify-content: space-around; align-items: center;">
+            <li><a href="/users/signin">Sign In</a></li>
+            <li><a href="/users/signup">Sign Up</a></li>
+        </div>
+        
+        </ul>
+    <%}%>
+    </div>
